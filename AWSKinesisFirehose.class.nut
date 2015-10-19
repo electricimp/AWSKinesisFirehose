@@ -21,7 +21,7 @@ class AWSKinesisFirehose {
 
     // deliveryStreamName: string
     // data: string or blob
-    function putRecord(deliveryStreamName, data, userCallback) {
+    function putRecord(deliveryStreamName, data, cb) {
         // Validate input length
         if (deliveryStreamName.len() > MAX_DELIVERY_STREAM_NAME_LEN) {
             server.error(format("Delivery stream name must be no more than %d characters.", MAX_DELIVERY_STREAM_NAME_LEN));
@@ -40,16 +40,10 @@ class AWSKinesisFirehose {
                 "Data": http.base64encode(data)
             }
         }
-        _awsRequest.post("/", headers, http.jsonencode(body), function(response) {
-            if (userCallback) {
-                userCallback(response);
-            } else {
-                _requestCallback(response);
-            }
-        }.bindenv(this));
+        _awsRequest.post("/", headers, http.jsonencode(body), cb);
     }
 
-    function putRecordBatch(deliveryStreamName, dataArray, userCallback) {
+    function putRecordBatch(deliveryStreamName, dataArray, cb) {
         // Validate input length
         if (deliveryStreamName.len() > MAX_DELIVERY_STREAM_NAME_LEN) {
             server.error(format("Delivery stream name must be no more than %d characters.", MAX_DELIVERY_STREAM_NAME_LEN));
@@ -71,12 +65,6 @@ class AWSKinesisFirehose {
             "DeliveryStreamName": deliveryStreamName,
             "Records": dataArray
         }
-        _awsRequest.post("/", headers, http.jsonencode(body), function(response) {
-            if (userCallback) {
-                userCallback(response);
-            } else {
-                _requestCallback(response);
-            }
-        }.bindenv(this));
+        _awsRequest.post("/", headers, http.jsonencode(body), cb);
     }
 }
