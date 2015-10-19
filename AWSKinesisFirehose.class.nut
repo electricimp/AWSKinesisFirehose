@@ -1,5 +1,5 @@
 class AWSKinesisFirehose {
-    static version = [0, 1, 0];
+    static version = [1, 0, 0];
 
     static SERVICE = "firehose";
     static TARGET_PREFIX = "Firehose_20150804";
