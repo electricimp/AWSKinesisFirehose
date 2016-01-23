@@ -2,7 +2,6 @@
  * This class can be used to send data to an AWS Kinesis Firehose Delivery Stream.
  *
  * @author Gino Miglio <gino@electricimp.com>
- * @author Mikhail Yurasov <mikhail@electricimp.com>
  *
  * @version 1.0.0
  */
