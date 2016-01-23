@@ -3,8 +3,8 @@
 To add this library to your model, add the following lines to the top of your agent code:
 
 ```
-#require "AWSRequestV4.class.nut:1.0.0"
-#require "AWSKinesisFirehose.class.nut:1.0.0"
+#require "AWSRequestV4.class.nut:1.0.1"
+#require "AWSKinesisFirehose.class.nut:1.0.1"
 ```
 
 **Note: [AWSRequestV4](https://github.com/electricimp/AWSRequestV4/) must be loaded.**
@@ -40,8 +40,8 @@ http://docs.aws.amazon.com/firehose/latest/APIReference/API_PutRecordBatch.html
 ## Example
 
 ```squirrel
-#require "AWSRequestV4.class.nut:1.0.0"
-#require "AWSKinesisFirehose.class.nut:1.0.0"
+#require "AWSRequestV4.class.nut:1.0.1"
+#require "AWSKinesisFirehose.class.nut:1.0.1"
 
 const ACCESS_KEY_ID = "YOUR_KEY_ID_HERE";
 const SECRET_ACCESS_KEY = "YOUR_KEY_HERE";
