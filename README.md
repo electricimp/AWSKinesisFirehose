@@ -3,8 +3,8 @@
 To add this library to your model, add the following lines to the top of your agent code:
 
 ```
-#require "AWSRequestV4.class.nut:1.0.0"
-#require "AWSKinesisFirehose.class.nut:1.0.0"
+#require "AWSRequestV4.class.nut:1.0.1"
+#require "AWSKinesisFirehose.class.nut:1.0.1"
 ```
 
 **Note: [AWSRequestV4](https://github.com/electricimp/AWSRequestV4/) must be loaded.**
@@ -25,7 +25,7 @@ http://docs.aws.amazon.com/firehose/latest/APIReference/API_PutRecord.html
 ---------------------- | -------------- | -----------
 **deliveryStreamName** | string         | Must be at least 1 and no more than 64 characters
 **data**               | string or blob | The actual data to be sent - will be automatically base64 encoded
-**userCallback**       | function       | Callback function that takes one parameter (a response table)
+**cb**                 | function       | Callback function that takes one parameter (a response table)
 
 ### putRecordBatch(deliveryStreamName, dataArray, userCallback)
 
@@ -35,13 +35,13 @@ http://docs.aws.amazon.com/firehose/latest/APIReference/API_PutRecordBatch.html
 ---------------------- | -------------- | -----------
 **deliveryStreamName** | string         | Must be at least 1 and no more than 64 characters
 **dataArray**          | array          | An array of data objects (each of which may be a string or blob)
-**userCallback**       | function       | Callback function that takes one parameter (a response table)
+**cb**                 | function       | Callback function that takes one parameter (a response table)
 
 ## Example
 
 ```squirrel
-#require "AWSRequestV4.class.nut:1.0.0"
-#require "AWSKinesisFirehose.class.nut:1.0.0"
+#require "AWSRequestV4.class.nut:1.0.1"
+#require "AWSKinesisFirehose.class.nut:1.0.1"
 
 const ACCESS_KEY_ID = "YOUR_KEY_ID_HERE";
 const SECRET_ACCESS_KEY = "YOUR_KEY_HERE";

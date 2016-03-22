@@ -3,10 +3,10 @@
  *
  * @author Gino Miglio <gino@electricimp.com>
  *
- * @version 1.0.0
+ * @version 1.0.1
  */
 class AWSKinesisFirehose {
-  static version = [1, 0, 0];
+  static version = [1, 0, 1];
 
   static SERVICE = "firehose";
   static TARGET_PREFIX = "Firehose_20150804";
