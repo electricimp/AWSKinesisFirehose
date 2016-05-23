@@ -3,7 +3,7 @@
 To add this library to your model, add the following lines to the top of your agent code:
 
 ```
-#require "AWSRequestV4.class.nut:1.0.1"
+#require "AWSRequestV4.class.nut:1.0.2"
 #require "AWSKinesisFirehose.class.nut:1.0.1"
 ```
 
@@ -40,7 +40,7 @@ http://docs.aws.amazon.com/firehose/latest/APIReference/API_PutRecordBatch.html
 ## Example
 
 ```squirrel
-#require "AWSRequestV4.class.nut:1.0.1"
+#require "AWSRequestV4.class.nut:1.0.2"
 #require "AWSKinesisFirehose.class.nut:1.0.1"
 
 const ACCESS_KEY_ID = "YOUR_KEY_ID_HERE";
@@ -66,8 +66,3 @@ firehose.putRecordBatch("myStreamName", dataArray, function(response) {
     server.log(response.statuscode + ": " + response.body);
 });
 ```
-
-## Development
-
-This repository uses [git-flow](http://jeffkreeftmeijer.com/2010/why-arent-you-using-git-flow/).
-Please make your pull requests to the __develop__ branch.
