@@ -52,7 +52,8 @@ class AWSKinesisFirehose {
     }
 
     local headers = {
-      "X-Amz-Target": format("%s.PutRecord", TARGET_PREFIX)
+      "X-Amz-Target": format("%s.PutRecord", TARGET_PREFIX),
+      "Content-Type": "application/x-amz-json-1.1"
     };
 
     local body = {
@@ -94,7 +95,8 @@ class AWSKinesisFirehose {
     }
 
     local headers = {
-      "X-Amz-Target": format("%s.PutRecordBatch", TARGET_PREFIX)
+      "X-Amz-Target": format("%s.PutRecordBatch", TARGET_PREFIX),
+      "Content-Type": "application/x-amz-json-1.1"
     };
 
     local body = {
