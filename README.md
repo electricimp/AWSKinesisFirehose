@@ -21,21 +21,21 @@ All parameters are strings. Access keys can be generated with IAM.
 
 http://docs.aws.amazon.com/firehose/latest/APIReference/API_PutRecord.html
 
-       Parameter       |       Type     | Description
----------------------- | -------------- | -----------
-**deliveryStreamName** | string         | Must be at least 1 and no more than 64 characters
-**data**               | string or blob | The actual data to be sent - will be automatically base64 encoded
-**cb**                 | function       | Callback function that takes one parameter (a response table)
+|       Parameter        |       Type     | Description |
+| ---------------------- | -------------- | ----------- |
+| **deliveryStreamName** | string         | Must be at least 1 and no more than 64 characters |
+| **data**               | string or blob | The actual data to be sent - will be automatically base64 encoded |
+| **cb**                 | function       | Callback function that takes one parameter (a response table) |
 
 ### putRecordBatch(deliveryStreamName, dataArray, userCallback)
 
 http://docs.aws.amazon.com/firehose/latest/APIReference/API_PutRecordBatch.html
 
-       Parameter       |       Type     | Description
----------------------- | -------------- | -----------
-**deliveryStreamName** | string         | Must be at least 1 and no more than 64 characters
-**dataArray**          | array          | An array of data objects (each of which may be a string or blob)
-**cb**                 | function       | Callback function that takes one parameter (a response table)
+|       Parameter        |       Type     | Description |
+| ---------------------- | -------------- | ----------- |
+| **deliveryStreamName** | string         | Must be at least 1 and no more than 64 characters |
+| **dataArray**          | array          | An array of data objects (each of which may be a string or blob) |
+| **cb**                 | function       | Callback function that takes one parameter (a response table) |
 
 ## Example
 
